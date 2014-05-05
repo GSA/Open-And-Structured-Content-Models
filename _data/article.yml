@@ -1,0 +1,223 @@
+- name: Title
+  description: >
+    The official title/name of the event, for example 
+    "First Annual Meeting of Government Web Content Management Community"
+  required: yes
+  multipleallowed: no
+  subelements:
+    - name: ShortTitle
+      description: >
+         title for use on list pages or as headlines
+      required: no
+      multipleallowed: no
+      parent: Title
+
+    - name: FullTitle
+      description: >
+         The complete title for the article.  For websites, titles should be 
+         descriptive so that they communicate what the content is about, as 
+         this will help with search engine optimization. 
+      required: yes
+      multipleallowed: no
+      parent: Title
+
+- name: Description
+  description: >
+    A brief description of the article.
+  required: yes
+  multipleallowed: no
+  subelements: 
+    - name: ShortDescription
+      description: >
+        A brief description of the content in the article for use in 
+        link descriptions, or other places where a blurb might be needed.
+      required: no
+      multipleallowed: no
+      parent: Description
+
+    - name: DetailedDescription
+      description: >
+        A complete description of the content of the article that might be useful 
+        for search engine optimization, as well as for RSS feeds.
+      required: yes
+      multipleallowed: no
+      parent: Description
+
+- name: URL
+  description: >
+    The fully specified URL of where the article can be found online.
+  required: no
+  multipleallowed: no
+
+- name: ArticleType
+  description: >
+    A  defined list of types of articles. Some examples may include news article, 
+    technical article, blog posting, research article, and web page.  You should 
+    select the most appropriate ones for your use. The values could also be 
+    subcategorized depending on the complexity of the model.  An 
+    implementation model would include definitions for any additional subtypes.
+  required: no
+  multipleallowed: no
+
+- name: Dates
+  description: >
+    Various dates related to the article.  It is expected that organizations will 
+    add other subfields to this field based on their needs.
+  required: no
+  multipleallowed: no
+  subelements: 
+    - name: DatePosted
+      description: >
+        The date the article was posted in the standard ISO 8061 date format.
+      required: yes
+      multipleallowed: no
+
+    - name: DateFirstPublished
+      description: >
+        The date the article was first published in the standard ISO 8061 date format.
+      required: no
+      multipleallowed: no
+
+    - name: DateLastModified
+      description: >
+        The date the article was last modified in the standard ISO 8061 date format.
+      required: no
+      multipleallowed: no
+
+    - name: DateReleased
+      description: >
+        The date the article was first released, which may be different then when
+        the article was posted publically.  The date should be specified in the 
+        standard ISO 8061 format.
+      required: no
+      multipleallowed: no
+
+- name: SourceOrganization
+  description: >
+    The name of the government agency or entity that created the content. Even if this 
+    content is not displayed on the agency or organization website, this metadata 
+    element will ensure that when this content is made available through APIs or 
+    other mechanisms, the source of the content is clearly delineated.
+  required: yes
+  multipleallowed: no
+
+- name: Contributor
+  description: >
+    A secondary contributor to the article. For example, when two organizations 
+    collaborate on an article.
+  required: no
+  multipleallowed: no
+
+- name: Author
+  description: > 
+    In instances where it is important to acknowledge the person who created 
+    the article, use this element. This element should use the Person specification
+    form Schema.org.
+  required: no
+  multipleallowed: yes
+
+- name: InLanguage
+  description: >
+    The language of the content. Use one of the language codes from the IETF BCP 47 
+    standard, which references the ISO 639 standard. The Library of Congress maintains 
+    the <a href="http://www.loc.gov/standards/iso639-2/php/code_list.php">ISO 639-2 list 
+    of three letter codes</a> for languages. 
+  required: no
+  multipleallowed: no
+
+- name: Audience
+  description: >
+    A defined list of audiences that are appropriate for your agency. 
+    This is the audience for whom the article is written - eg., in a health information 
+    setting, sample values could be Patients, Health professionals, and Healthcare organizations.
+  required: no
+  multipleallowed: yes
+
+- name: References
+  description: >
+    Used to specify bibliographic citations or source references for 
+    articles where it is important to cite sources. This specification does not 
+    specify the use of one reference citation format or the other. This can be 
+    implemented based on the agency’s specific citation style guides.
+  required: no
+  multipleallowed: yes
+
+- name: Topics
+  description: >
+    A broad specification of what the article is about. For example an article on air 
+    pollution in the Great Lakes area might have “Air pollution” and "Great 
+    Lakes" as topics. Implementation models may use further specializations of 
+    topics for their purposes - for example, where geographic location is an 
+    important aspect of content, there might be a clearly specified element 
+    for geographic location.
+  required: yes
+  multipleallowed: yes
+
+- name: ArticleBody
+  description: >
+    A container for the entire content of the article.
+  required: yes
+  multipleallowed: no
+  subelements: 
+    - name: ArticleSection
+      description: >
+        Demarcates a section within the article.
+      required: yes
+      multipleallowed: yes
+      subelements:
+        - name: SectionTitle
+          description: >
+            The title of the section.
+          required: yes
+          multipleallowed: no
+
+        - name: SectionBody
+          description: >
+            The content of the section.
+          required: yes
+          multipleallowed: no
+
+- name: RelatedMultimedia
+  description: >
+    A container element for multimedia files associated with the article.
+  required: no
+  multipleallowed: no
+  subelements:
+    - name: Video
+      description: >
+        A video file related to the article's content.
+      required: no
+      multipleallowed: yes
+
+    - name: Audio
+      description: >
+        An audio file related to the article's content
+      required: no
+      multipleallowed: yes
+
+    - name: Image
+      description: >
+        An image file related to the article's content.
+      required: no
+      multipleallowed: yes
+
+- name: AggregateRating
+  description: >
+    An overall rating based on reviews or ratings of the article.  The schema 
+    for collecting/storing/disseminating rating information is incorporated 
+    from Schema.org's <a href="http://schema.org/AggregateRating">Aggregate Rating schema</a>.
+  required: no
+  multipleallowed: no
+
+- name: IsBasedOnURL
+  description: >
+    A resource that was used in the creation of this resource. This term 
+    can be repeated for multiple sources.
+  required: no
+  multipleallowed: yes
+
+- name: RelatedURLs
+  description: >
+    URls to content related to the article.
+  required: no
+  multipleallowed: yes

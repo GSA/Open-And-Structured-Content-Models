@@ -1,0 +1,9 @@
+<li>{{ include.param.name }} ({% if include.param.required %}Required{% else %}Optional{% endif %}, {% if include.param.multipleallowed %}Multiple allowed{% else %}Only one allowed{% endif %})
+{% if include.param.subelements.size != nil %}
+<ul>
+	{% for subelement in include.param.subelements %}
+		{% include modeloverview.html param=subelement %}
+	{% endfor %}
+</ul>
+{% endif %}
+</li>

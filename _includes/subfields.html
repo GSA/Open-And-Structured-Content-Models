@@ -1,0 +1,39 @@
+{% for element in include.param %}
+	{% if element.subelements != nil %}
+		{% capture elementheading %}
+		<h3 id="{{ element.name}}">{{ element.name }} Subelement Field Definitions</h3>
+		<p>
+			<strong>Parent:</strong> <a href="
+			{% if element.parent != nil %}
+				#{{ element.parent }}">{{ element.parent }}</a>
+			{% else %}
+				#{{ modeltitle }}">{{ modeltitle }}</a>
+			{% endif %}
+		</p>
+		{% endcapture %}
+		{{ elementheading | strip_newlines }}
+		<table class="table">
+			<tr>
+				<th class="fldname">Field Name</th>
+				<th class="flddescription">Description</th>
+				<th class="fldrequired">Required</th>
+				<th class="fldmultiple">Allow Multiple</th>
+			</tr>
+			{% for subelement in element.subelements %}
+			<tr>
+				<td>
+					{% if subelement.subelements != nil %}
+						<a href="#{{ subelement.name }}">{{ subelement.name }}</a>
+					{% else %}
+						{{ subelement.name }}
+					{% endif %}
+				</td>
+				<td>{{ subelement.description }}</td>
+				<td>{{ subelement.required }}</td>
+				<td>{{ subelement.multipleallowed }}</td>
+			</tr>
+			{% endfor %}
+		</table>
+		{% include subfields.html param=element.subelements %}
+	{% endif %}
+{% endfor %}

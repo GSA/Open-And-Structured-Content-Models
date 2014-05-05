@@ -1,0 +1,162 @@
+h1 {
+	font-size: 200%;
+}
+
+h2 {
+    font-size: 120%;
+    width: 100%;
+    background-color: #006875;
+    color: #fff;
+    padding: 5px 0 5px 5px;
+    font-weight: bold;
+    clear: both;
+}
+
+h3 {
+	font-size: 110%;
+	font-weight: bold;
+	color: #006875;
+	font-style: italic;
+	width: 100%;
+	border-bottom: thin solid #006875;
+}
+
+a, a:link {
+	color: #268CBF;
+}
+
+a:hover, a:focus {
+	text-decoration: underline !important;
+	color: #2a6496;
+}
+
+a:visited {
+	color: #2a6496;
+}
+
+.navbar-inverse .navbar-brand {
+	font-size: 115%;
+	color: #ffffff;
+	font-weight: bold;
+	width: 280px;
+	margin: -10px 0 0 0;
+	text-align: center;
+	font-family: courier, monospace;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+	color: #ffffff;
+}
+
+.navbar-inverse .navbar-nav > .active > a, .navbar-inverse .navbar-nav > .active > a:hover, .navbar-inverse .navbar-nav > .active > a:focus {
+	background: #333333;
+}
+
+.navbar-inverse .navbar-nav > .open > a, .navbar-inverse .navbar-nav > .open > a:hover, .navbar-inverse .navbar-nav > .open > a:focus  {
+	background: #333333;
+}
+
+.navbar-inverse .navbar-nav .open .dropdown-menu > .active > a, .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:hover, .navbar-inverse .navbar-nav .open .dropdown-menu > .active > a:focus {
+	background: #333333;
+}
+
+.navbar-inverse {
+    background-color: #0c555d;
+}
+
+th.fldname {
+	width: 20%;
+}
+
+th.flddescription {
+	width: 60%;
+}
+
+th.fldrequired {
+	width: 10%;
+}
+
+th.fldmultiple {
+	width: 10%;
+}
+
+.hpfeature {
+	float: left;
+	background-color: #eff7b2;
+	border-radius: 8px;
+	margin: 10px 0 20px 0;
+	padding: 20px 20px 0 20px;
+}
+
+.hpfeature > p {
+	width: 40%;
+	float: left;
+	font-size: 110%;
+}
+
+.hpfeature > img {
+	float: right;
+	width: 55%;
+	margin: 0 0 15px 0;
+	max-width: 600px;
+}
+
+.footer {
+	width: 100%;
+	text-align: center;
+	margin: 0 0 20px 0;
+}
+
+.footer ul {
+	list-style: none;
+	width: 100%;
+	text-align: center;
+}
+
+.footer ul > li {
+	display: inline;
+}
+
+.footer ul > li:after {
+	content: ' |';
+}
+
+.footer ul > li:last-child:after {
+	content: '';
+}  
+
+.footer .logos {
+	margin: 15px 0 0 0;
+	clear: both;
+}
+
+.footer .logos img {
+	margin: 0 0 0 50px;
+}
+
+.footer hr {
+	width: 75%;
+	background: #006875;
+	height: 1px;
+}
+
+@media (max-width:915px){
+	a#forkbanner {
+		display: none;
+	}
+}
+
+@media (max-width:768px){
+	.navbar-inverse .navbar-nav .open .dropdown-menu > li > a {
+		color: #ffffff;
+	}
+
+	.hpfeature > p {
+		width: 100%;
+		float: right;
+	}
+
+	.hpfeature > img {
+		display: none;
+	}
+}

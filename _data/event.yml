@@ -1,0 +1,316 @@
+- name: Title
+  description: >
+    The official title/name of the event, for example 
+    "First Annual Meeting of Government Web Content Management Community"
+  required: yes
+  multipleallowed: no
+
+- name: ShortTitle
+  description: >
+    Title for use on list pages or Tweets.  Should be a length of 40-50 characters, 
+    for example "Annual Govt. Web Community Meeting". 
+  required: no
+  mltipleallowed: no
+
+- name: Description
+  description: >
+    A brief description of the event for use in link descriptions, marketing materials, etc..
+  required: yes
+  multipleallowed: no
+
+- name: DetailedDescription
+  description: >
+    A complete description of the event to include details that will 
+    help readers decide if the event is something they want to attend.
+  required: no
+  multipleallowed: no
+
+- name: EventType
+  description: >
+    A defined list of values describing the type of the event.  Some examples are listed below, but
+    you should select the most appropriate ones for your use.  When implementing the even model, you should
+    include deifnitions for your event types.  Samples might inlcude: Conference, Press Conference, 
+    Program Review Meeting, Public Hearing, FACA Advisory Board/Committee Meeting,  Workshop,  
+    Training, Seminar, Commission Meeting, Virtual Town Hall, and Twitter Chat
+  required: yes
+  multipleallowed: no
+
+- name: StartDateTime
+  description: >
+    The date and time that the event starts. Generally, dates should be sepcified using the ISO 8061 Date format.
+  required: yes
+  multipleallowed: no
+
+- name: EndDateTime
+  description: >
+    The date and time that the event ends. Generally, dates should be sepcified using the ISO 8061 Date format.
+  required: yes
+  multipleallowed: no
+
+- name: AttendanceType
+  description: >
+    A list of values of who can attend the event.  Examples might be: 
+    Open to public/Open to members/By invitation
+  required: yes
+  multipleallowed: no
+
+- name: EventContact
+  description: >
+    How to contact the ageny for more information about the event.
+  required: yes
+  multipleallowed: no
+  subelements:
+    - name: EventURL
+      description: >
+        A web URL where people can find out more informaiton about the event.
+      required: no
+      multipleallowed: no
+      parent: EventContact
+
+    - name: ContactEmail
+      description: >
+        An e-mail address people can e-mail to find out more information about the event.
+      required: no
+      multipleallowed: no
+      parent: EventContact
+
+- name: Sponsor
+  description: >
+    The organization(s) that is/are sponsring the event.
+  required: no
+  multipleallowed: yes
+
+- name: Speaker
+  description: >
+    Whom will be speaking at the event.
+  required: yes
+  multipleallowed: yes
+  subelements:
+    - name: Name
+      description: >
+        The name of the Speaker.
+      required: yes
+      multipleallowed: no
+      parent: Speaker
+
+    - name: Title
+      description: >
+        The title of the speaker.
+      required: yes
+      multipleallowed: no
+      parent: Speaker
+
+    - name: OrganizationAffiliation
+      description: >
+        The organization whom the speaker is from.
+      required: no
+      multipleallowed: no
+      parent: Speaker
+
+    - name: Biography
+      description: >
+        A biography of the speaker.
+      required: no
+      multipleallowed: no
+      parent: Speaker
+
+    - name: SpeakerType
+      description: >
+        A list of values, such as keynote speaker, panelist, moderator, and presenter.
+      required: yes
+      multipleallowed: no
+      parent: Speaker
+
+- name: EventFormat
+  description: >
+    A list of values describing the format of the event, such as in peroson or virtual.
+  required: no
+  multipleallowed: no
+
+- name: VenueInformation
+  description: >
+    Information on where the event is being held.
+  required: yes
+  multipleallowed: yes
+  subelements:
+    - name: VenueType
+      description: >
+        Wether the venue is online or a physical location
+      required: yes
+      multipleallowed: no
+      parent: VenueInformation
+
+    - name: Location
+      description: >
+        Details on the location of the venue.
+      required: yes
+      multipleallowed: yes
+      parent: VenueInformation
+      subelements:
+        - name: VirtualAddress
+          description: >
+            Information on virtual locations.
+          required: no
+          multipleallowed: no
+          parent: Location
+          subelements:
+            - name: URL
+              description: >
+                A web URL where the event is being held.
+              required: no
+              multipleallowed: no
+              parent: VirtualAddress
+
+            - name: TeleconferenceNumber
+              description: >
+                The phone number for the event.
+              required: no
+              multipleallowed: no
+              parent: VirtualAddress
+
+            - name: VideoconferenceInfo
+              description: >
+                Information on how to access the event via video conference.
+              required: no
+              multipleallowed: no
+              parent: VirtualAddress
+
+        - name: PostalAddress
+          description: >
+            A physical address for the event, specified based on the Schema.org PostalAddress definition.
+          required: no
+          multipleallowed: no
+          parent: Location
+          subelements:
+            - name: addressCountry
+              description: >
+                The country the location resides in.
+              required: no
+              multipleallowed: no
+              parent: PostalAddress
+
+            - name: addressLocality
+              description: >
+                The city or other locality that the location resides in.
+              required: yes
+              multipleallowed: no
+              parent: PostalAddress
+
+            - name: addressRegion
+              description: >
+                The state or other region that the location resides in.
+              required: yes
+              multipleallowed: no
+              parent: PostalAddress
+
+            - name: postalCode
+              description: >
+                The postal/zip code that the location resides in.
+              required: yes
+              multipleallowed: no
+              parent: PostalAddress
+
+            - name: streetAddress
+              description: >
+                The street address that the location resides on.
+              required: yes
+              multipleallowed: no
+              parent: PostalAddress
+
+            - name: GeoCoordinates
+              description: >
+                Latitude and longtidue coordinates for the location.
+              required: no
+              multipleallowed: no
+              parent: PostalAddress
+
+- name: RegistrationInformation
+  description: >
+    Describes how a person can register to attend the event.
+  required: no
+  multipleallowed: no
+  subelements:
+    - name: RegistrationType
+      description: >
+        A list of values describing the type of registration required to attend
+        the event, such as no registration required, reqistration required, 
+        registration required for attendence in person, and registration required for
+        online AttendanceType
+      required: yes
+      multipleallowed: no
+      parent: RegistrationInformation
+
+    - name: RegistrationCost
+      description: >
+        The cost to register to attend the event.
+      required: yes
+      multipleallowed: no
+      parent: RegistrationInformation
+
+    - name: RegistrationURL
+      description: >
+        The web URL where people can register to attend the event.
+      required: no
+      multipleallowed: no
+      parent: RegistrationInformation
+
+    - name: RegistrationNote
+      description: >
+        Any notes on how to register for the event.
+      required: no
+      multipleallowed: no
+      parent: RegistrationInformation
+
+- name: EventMaterials
+  description: >
+    Describes how materials from the event can be obtained.
+  required: no
+  multipleallowed: yes
+  subelements:
+    - name: EventMaterialsType
+      description: >
+        A list of values describing the types of materials available. Examples may
+        include program, agenda, video, report, presentation, and audio.
+      required: yes
+      multipleallowed: no
+      parent: EventMaterials
+
+    - name: EventMaterialsArtifact
+      description: >
+        Where the event materials can be obtained.  This might be a web URL or some 
+        other locaiton information.
+      required: yes
+      multipleallowed: no
+      parent: EventMaterials
+
+- name: Topics
+  description: >
+    A specification of what the event might cover.
+  required: no
+  multipleallowed: no
+
+- name: EventFeedback
+  description: >
+    Feedback from the event
+  required: no
+  multipleallowed: no
+  subelements:
+    - name: Rating
+      description: >
+        The average rating the event received via attendee evalutions, etc...
+      required: no
+      multipleallowed: no
+      parent: EventFeedback
+
+    - name: EventComments
+      description: >
+        Comments from event attendees.
+      required: no
+      multipleallowed: yes
+      parent: EventFeedback
+
+- name: InLanguage
+  description: >
+    The language that the event takes place in, as specified in the ISO639 standard.
+  required: no
+  multipleallowed: yes
