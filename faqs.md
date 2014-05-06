@@ -38,6 +38,15 @@ Logan Powell
 ### Centers for Disease Control and Prevention
 Fred Smith
 
+### Consumer Financial Protection Bureau
+Daniel Munz
+
+### Department of Education
+Jill James
+
+### Department of Labor
+Edward McCarthy
+
 ### Economic Research Service, Department of Agriculture
 Mary Maher
 
