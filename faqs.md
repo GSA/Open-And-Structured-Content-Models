@@ -27,4 +27,35 @@ not represent all the possible content elements that agencies may want to includ
 review of both examples of events and articles on federal websites and on existing schemas and standards such as [Schema.org](http://www.schema.org) and [RDF-A](http://rdfa.info). 
 
 ## Who Created These Models
-In 2013, the Digital Services Innovation Center sponsored a cross-agency working group to develop shared and open content models for digital content across the federal government. Here are the contributors to the Event and Article models.
+In 2013, the [Digital Services Innovation Center](https://www.digitalgov.gov/about/) sponsored a cross-agency working group to develop shared and open content models for digital content across the federal government. The Open and Structured Content Models Working Group members who contributed to the article and event models are listed below.
+
+### Administrative Office of the U.S. Courts
+Allison Alexander
+
+### Census Bureau
+Logan Powell
+
+### Centers for Disease Control and Prevention
+Fred Smith
+
+### Economic Research Service, Department of Agriculture
+Mary Maher
+
+### Food and Drug Administration
+Gong Chen
+
+### General Services Administration
+* Russell O'Neill
+* Jacob Parcell
+* Phil Ashlock
+* Laura Gray
+
+### National Institutes of Health
+* Lakshmi Grama
+* Holly Irving
+
+### Securities and Exchange Commission
+Robert Rand
+
+### Social Security Administration
+Wayne Whitten

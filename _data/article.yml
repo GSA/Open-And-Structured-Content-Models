@@ -1,7 +1,7 @@
 - name: Title
   description: >
-    The official title/name of the event, for example 
-    "First Annual Meeting of Government Web Content Management Community"
+    The official title/name of the article, for example 
+    "How to file your federal income taxes".
   required: yes
   multipleallowed: no
   subelements:
