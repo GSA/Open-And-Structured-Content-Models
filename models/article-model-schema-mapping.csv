@@ -16,6 +16,7 @@ InLanguage        ,inLanguage,,Text,
 Audience          ,audience,,Audience,
 References        ,citation,,CreativeWork or Text,
 Topics            ,,"about, genre, keyword, articleSection",,articleCategory
+ArticleBody,articleBody,,Text,
 ArticleBody -> ArticleSection -> SectionTitle,isPartOf -> name,html5 sections & headings ,,
 ArticleBody -> ArticleSection -> SectionBody ,isPartOf -> articleBody,html5 sections & headings,,
 RelatedMultimedia -> Video,,associatedMedia/encoding,,
