@@ -1,4 +1,4 @@
-OASCM Type/Property,Schema.org Type/Property,Schema.org possible match,schema.org class,suggested change
+OASCM Property,Schema.org Property,Possible match,Schema.org Type,suggested change
 Title -> ShortTitle,,,,
 Title -> FullTitle,name,,Text,
 Description -> ShortDescription,,,,
