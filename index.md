@@ -16,9 +16,14 @@ title: Home
 </div>
 
 ## We Want You To
-
 1. Use and adapt these models within your own content management and publishing systems to help make your content platform agnostic and shareable with other agencies. 
 2. [Help us]({{ site.baseurl }}/contribute.html) improve the models and plan our next steps by submitting pull requests or commenting on elements that you think should be included or need more clarification.
+
+## Keeping Up With The Open And Structured Content Modeling Conversation
+The easiest way to keep up with what the working group is working on is to:
+
+1. Follow and join the conversation on [GitHub](https://github.com/GSA/Open-And-Structured-Content-Models).
+2. Keep up to date by reading [articles on open and structured content](http://www.digitalgov.gov/tag/content-models/) that are being published on [DigitalGov.gov](http://www.digitalgov.gov).
 
 ## About this Project/Working Group
 In 2013, the [Digital Services Innovation Center](https://www.digitalgov.gov/about/) sponsored a cross-agency working group to develop 
