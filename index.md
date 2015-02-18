@@ -10,7 +10,7 @@ title: Home
 	"<a href="{{ site.baseurl }}/models/event-model.html">events</a>" &ndash; two commonly used content types on government
 	 web sites have been created to help government agencies easily publish content in multiple forms and on 
 	 multiple platforms by a cross-agency working group sponsored by the <a href="https://www.digitalgov.gov/about/">Digital Services Innovation 
-	 Center</a>.
+	 Center</a>. 
 </p>
  <img alt="" src="{{ site.baseurl }}/images/hpfeature.jpg" />
 </div>
