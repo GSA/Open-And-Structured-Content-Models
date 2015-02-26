@@ -1,0 +1,27 @@
+OASCM Property,Schema.org Property,Possible match,Schema.org Type,suggested change
+Title -> ShortTitle,,,,
+Title -> FullTitle,name,,Text,
+Description -> ShortDescription,,,,
+Description -> DetailedDescription,description,,Text,
+URL,url,,URL,
+ArticleType,,"BlogPosting, NewsArticle, ScholarlyArticle, TechArticle",,articleType
+Dates -> DatePosted         ,,,,
+Dates -> DateFirstPublished ,datePublished,,Date,
+Dates -> DateLastModified   ,dateModified,,Date,
+Dates -> DateReleased       ,dateCreated,,Date,
+SourceOrganization,sourceOrganization,,Organization,publisher
+Contributor       ,contributor,,Organization or Person,
+Author            ,author,,Organization or Person,
+InLanguage        ,inLanguage,,Text,
+Audience          ,audience,,Audience,
+References        ,citation,,CreativeWork or Text,
+Topics            ,,"about, genre, keyword, articleSection",,articleCategory
+ArticleBody,articleBody,,Text,
+ArticleBody -> ArticleSection -> SectionTitle,isPartOf -> name,html5 sections & headings ,,
+ArticleBody -> ArticleSection -> SectionBody ,isPartOf -> articleBody,html5 sections & headings,,
+RelatedMultimedia -> Video,,associatedMedia/encoding,,
+RelatedMultimedia -> Audio,,associatedMedia/encoding,,
+RelatedMultimedia -> Image,,associatedMedia/encoding,,
+AggregateRating,aggregateRating,,AggregateRating,
+IsBasedOnURL   ,isBasedOnUrl,,URL,
+RelatedURLs    ,,citation,URL,relatedLink
